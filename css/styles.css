@@ -1,0 +1,180 @@
+:root {
+	/* Font families  */
+	--ff-primary: "Montserrat", sans-serif;
+	--ff-secondary: "Lora", sans-serif;
+	--ff-tertiary: "Crimson Pro", sans-serif;
+
+	/* Colors  */
+	--color-background: #181719;
+	--color-primary: #ffffff;
+	--color-secondary: #828282;
+	--color-hamburger: #f9f9f9;
+	--color-attribution: #a9a9a9;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+
+body {
+	font-family: var(--ff-primary);
+	background-color: var(--color-background);
+	color: var(--color-primary);
+	height: 100%;
+}
+
+.container {
+	width: 92%;
+	padding: 2rem 0;
+	margin: 0 auto;
+}
+
+img {
+	display: inline-block;
+	width: 100%;
+	max-width: 100%;
+}
+
+.site-title {
+	font-family: var(--ff-tertiary);
+	font-weight: 200;
+	font-size: 1.4rem;
+	padding: 0.6em;
+	border: 1px solid #ffffff;
+	display: inline-block;
+	margin: 0;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mobile-menu {
+	cursor: pointer;
+}
+
+.hamburger {
+	height: 3px;
+	width: 28px;
+	margin-bottom: 5px;
+	background-color: var(--color-primary);
+}
+
+.hamburger:last-of-type {
+	margin-bottom: 0;
+}
+
+header {
+	padding-top: 1em;
+}
+
+h1 {
+	font-family: var(--ff-secondary);
+	font-weight: 400;
+	font-size: 3.6rem;
+	margin: 1em 0;
+}
+
+.description {
+	font-weight: 300;
+	font-size: 1.4rem;
+	width: 75%;
+	word-wrap: break-word;
+	line-height: 1.5;
+	margin-bottom: 2em;
+}
+
+.read-more {
+	font-size: 1.4rem;
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+.arrow {
+	margin-left: 0.7em;
+	font-weight: bold;
+}
+
+.featured {
+	margin-top: 5em;
+	margin-bottom: 15rem;
+	position: relative;
+}
+
+.card {
+	width: 80%;
+	max-width: 410px;
+	background-color: var(--color-background);
+	padding: 1em;
+	padding-right: 8em;
+	position: absolute;
+	bottom: -90px;
+	right: 3%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card__header {
+	display: flex;
+	align-items: center;
+}
+
+.card__image {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.card__name {
+	font-weight: 500;
+	font-size: 1.2rem;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+.card__job {
+	font-size: 1rem;
+	color: var(--color-secondary);
+	margin: 0;
+}
+
+.card__title {
+	font-family: var(--ff-secondary);
+	font-weight: 700;
+	font-size: 1.8rem;
+	line-height: 1.4;
+}
+
+.attribution {
+	width: 60%;
+	max-width: 300px;
+	margin: 0;
+	color: var(--color-attribution);
+	font-weight: 600;
+	font-size: 1.4rem;
+	text-align: center;
+	padding: 1em 2em 0;
+	border-top: 1px solid var(--color-attribution);
+	position: relative;
+	left: 50%;
+	bottom: 10px;
+	transform: translate(-50%, -10%);
+}
+
+.attribution-link,
+attribution-link:focus,
+attribution-link:visited,
+attribution-link:active {
+	color: var(--color-attribution);
+	text-decoration: none;
+}
