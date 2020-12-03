@@ -10,6 +10,13 @@
 	--color-secondary: #828282;
 	--color-hamburger: #f9f9f9;
 	--color-attribution: #a9a9a9;
+
+	/* Font sizes  */
+	--fs-extra-large: 3.6rem;
+	--fs-large: 1.8rem;
+	--fs-medium: 1.4rem;
+	--fs-small: 1.2rem;
+	--fs-extra-small: 1rem;
 }
 
 *,
@@ -27,7 +34,7 @@ body {
 	font-family: var(--ff-primary);
 	background-color: var(--color-background);
 	color: var(--color-primary);
-	height: 100%;
+	height: auto;
 	position: relative;
 }
 
@@ -37,8 +44,10 @@ body {
 
 .container {
 	width: 92%;
+	max-width: 1024px;
 	padding: 2rem 0;
 	margin: 0 auto;
+	position: relative;
 }
 
 img {
@@ -50,11 +59,14 @@ img {
 .site-title {
 	font-family: var(--ff-tertiary);
 	font-weight: 200;
-	font-size: 1.4rem;
+	font-size: var(--fs-medium);
 	padding: 0.6em;
 	border: 1px solid #ffffff;
 	display: inline-block;
 	margin: 0;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--color-primary);
 }
 
 .navbar {
@@ -140,6 +152,15 @@ img {
 	margin-bottom: 0;
 }
 
+.navbar--large {
+	display: none;
+}
+
+.nav__links {
+	text-decoration: none;
+	color: var(--color-primary);
+}
+
 header {
 	padding-top: 1em;
 }
@@ -147,13 +168,13 @@ header {
 h1 {
 	font-family: var(--ff-secondary);
 	font-weight: 400;
-	font-size: 3.6rem;
+	font-size: var(--fs-extra-large);
 	margin: 1em 0;
 }
 
 .description {
 	font-weight: 300;
-	font-size: 1.4rem;
+	font-size: var(--fs-medium);
 	width: 75%;
 	word-wrap: break-word;
 	line-height: 1.5;
@@ -161,7 +182,7 @@ h1 {
 }
 
 .read-more {
-	font-size: 1.4rem;
+	font-size: var(--fs-medium);
 	color: var(--color-primary);
 	text-decoration: none;
 }
@@ -204,13 +225,13 @@ h1 {
 
 .card__name {
 	font-weight: 500;
-	font-size: 1.2rem;
+	font-size: var(--fs-small);
 	margin-top: 0;
 	margin-bottom: 0.5rem;
 }
 
 .card__job {
-	font-size: 1rem;
+	font-size: var(--fs-extra-small);
 	color: var(--color-secondary);
 	margin: 0;
 }
@@ -218,24 +239,24 @@ h1 {
 .card__title {
 	font-family: var(--ff-secondary);
 	font-weight: 700;
-	font-size: 1.8rem;
+	font-size: var(--fs-large);
 	line-height: 1.4;
 }
 
+footer {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 1em 2em;
+	border-top: 1px solid var(--color-attribution);
+}
+
 .attribution {
-	width: 60%;
-	max-width: 300px;
-	margin: 0;
 	color: var(--color-attribution);
 	font-weight: 600;
-	font-size: 1.4rem;
-	text-align: center;
-	padding: 1em 2em 0;
-	border-top: 1px solid var(--color-attribution);
-	position: relative;
-	left: 50%;
-	bottom: 10px;
-	transform: translate(-50%, -10%);
+	font-size: var(--fs-medium);
+	margin: 0;
 }
 
 .attribution-link,
@@ -244,4 +265,106 @@ attribution-link:visited,
 attribution-link:active {
 	color: var(--color-attribution);
 	text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+	body {
+		min-height: 100vh;
+	}
+	.body-container {
+		display: flex;
+		padding: 10em 0;
+	}
+
+	.container {
+		padding-top: 5rem;
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	.featured {
+		margin: 0;
+	}
+
+	.navbar--large {
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar--large__items {
+		list-style: none;
+		font-size: var(--fs-medium);
+		font-weight: 500;
+		margin-left: 5em;
+	}
+
+	.hamburger-menu {
+		display: none;
+	}
+
+	.card {
+		padding: 2em;
+		padding-right: 10em;
+	}
+}
+
+/* Styling to fix layout problems with the attribution clashing with the last element in the page 
+due to insufficient of the body. */
+@media (min-width: 1024px) and (max-width: 1439px) {
+	body {
+		padding-bottom: 15em;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		max-width: 1300px;
+	}
+
+	.body-container {
+		padding-top: 10em;
+	}
+
+	.navbar--large__items {
+		font-size: 1.8rem;
+	}
+
+	h1 {
+		font-size: 4.8rem;
+	}
+
+	.description {
+		font-size: 2.4rem;
+	}
+
+	.read-more {
+		font-size: 1.8rem;
+	}
+
+	.card__name {
+		font-size: 1.4rem;
+	}
+
+	.card__job {
+		font-size: 1.2rem;
+	}
+
+	.card__title {
+		font-size: 2.4rem;
+	}
+}
+
+@media (min-width: 1920px) {
+	.body-container {
+		padding-top: 15rem;
+	}
+}
+
+@media (min-width: 2560px) {
+	.body-container {
+		padding-top: 30rem;
+	}
 }

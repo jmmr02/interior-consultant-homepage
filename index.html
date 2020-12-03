@@ -25,9 +25,10 @@
 <body>
 
 
-
+    <!-- Start of container div  -->
     <div class="container">
 
+        <!-- Start of expandable navigation menus for mobile devices  -->
         <nav class="mobile-menu --hidden">
             <div class="close-button"></div>
 
@@ -38,59 +39,80 @@
                 <li class="mobile-menu-list__items">Contact</li>
             </ul>
         </nav>
+        <!-- End of expandable navigation menus for mobile devices -->
 
         <nav class="navbar">
-            <p class="site-title">THIS INTERIOR</p>
+            <a class="site-title" href="#" rel="noopener noreferrer">THIS INTERIOR</a>
 
+            <!-- Hamburger menu for small screens  -->
             <div class="hamburger-menu">
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
             </div>
+
+            <!-- Navigatio menu for larger screens  -->
+            <ul class="navbar--large">
+                <li class="navbar--large__items">
+                    <a href="#" class="nav__links" rel="noopener noreferrer">Home</a>
+                </li>
+                <li class="navbar--large__items">
+                    <a href="#" class="nav__links" rel="noopener noreferrer">Collection</a>
+                </li>
+                <li class="navbar--large__items">
+                    <a href="#" class="nav__links" rel="noopener noreferrer">About</a>
+                </li>
+                <li class="navbar--large__items">
+                    <a href="#" class="nav__links" rel="noopener noreferrer">Contact</a>
+                </li>
+            </ul>
         </nav>
 
-        <header>
-            <h1>Modern interior</h1>
+        <!-- Start of body-container  -->
+        <div class="body-container">
+            <header>
+                <h1>Modern interior</h1>
 
-            <p class="description">A Full-Service residential & commercial interior design and staging company offering
-                professional
-                organizing & eco-services
-            </p>
+                <p class="description">A Full-Service residential & commercial interior design and staging company
+                    offering
+                    professional
+                    organizing & eco-services
+                </p>
 
-            <a href="#" rel="noopener noreferrer" class="read-more">Read more
-                <span class="arrow">&rarr;</span>
-            </a>
-        </header>
+                <a href="#" rel="noopener noreferrer" class="read-more">Read more
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </header>
 
-        <main>
+            <main>
+                <div class="featured">
+                    <img src="./images/photo1.png" alt="A photo of a stylish and modern living room">
 
-            <div class="featured">
-                <img src="./images/photo1.png" alt="A photo of a stylish and modern living room">
+                    <div class="card">
+                        <div class="card__header">
+                            <div>
+                                <img src="./images/photo2.png" alt="A picture of a woman" class="card__image">
+                            </div>
 
-                <div class="card">
-                    <div class="card__header">
-                        <div>
-                            <img src="./images/photo2.png" alt="A picture of a woman" class="card__image">
+                            <div>
+                                <p class="card__name">Alize Webber</p>
+                                <p class="card__job">Interior designer</p>
+                            </div>
                         </div>
 
-                        <div>
-                            <p class="card__name">Alize Webber</p>
-                            <p class="card__job">Interior designer</p>
-                        </div>
+                        <h2 class="card__title">Designed in 2020 by Alize Webber</h2>
                     </div>
-
-                    <h2 class="card__title">Designed in 2020 by Alize Webber</h2>
                 </div>
-            </div>
-
-        </main>
+            </main>
+        </div>
+        <!-- End of body-container  -->
     </div>
+    <!-- End of container div  -->
 
     <footer>
         <p class="attribution">jmmr@<a href="#" target="_blank" rel="noopener noreferrer"
                 class="attribution-link">Devchallenges.io</a></p>
     </footer>
-
     <script src="./js/app.js"></script>
 </body>
 
