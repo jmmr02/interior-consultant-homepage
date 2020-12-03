@@ -28,6 +28,11 @@ body {
 	background-color: var(--color-background);
 	color: var(--color-primary);
 	height: 100%;
+	position: relative;
+}
+
+.--overflow-hidden {
+	overflow: hidden;
 }
 
 .container {
@@ -53,13 +58,75 @@ img {
 }
 
 .navbar {
+	display: block;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.mobile-menu {
+.hamburger-menu {
 	cursor: pointer;
+}
+
+.mobile-menu {
+	min-height: 100vh;
+	width: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: var(--color-background);
+	z-index: 2;
+	transition: 0.5s;
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+.close-button {
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	right: 2rem;
+	top: 3.2rem;
+	cursor: pointer;
+}
+
+.close-button::before,
+.close-button::after {
+	position: absolute;
+	content: "";
+	height: 3px;
+	width: 28px;
+	background-color: var(--color-primary);
+}
+
+.close-button::before {
+	transform: rotate(45deg);
+}
+
+.close-button::after {
+	transform: rotate(-45deg);
+}
+
+.mobile-menu-list {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.mobile-menu-list__items {
+	list-style: none;
+	font-weight: 500;
+	font-size: 1.8rem;
+	margin-bottom: 2em;
+	cursor: pointer;
+}
+
+.mobile-menu-list__items--bold {
+	font-weight: 700;
 }
 
 .hamburger {
